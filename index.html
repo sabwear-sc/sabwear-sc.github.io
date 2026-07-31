@@ -29,35 +29,35 @@ const PRODUCTS = [
  {id:1, name:"T-shirt levi's simple", label:"BEST SELLER", price:3500, stock:32, sizes:ALL_SIZES, colors:[
    {name:"Black", hex:"#0A0A0A", img:"https://h.top4top.io/p_38630u2b00.jpg"},
    {name:"Green", hex:"#1f3a2a", img:"https://b.top4top.io/p_3863kzy820.jpg"},
-   {name:"White", hex:"#F5F0E8", img:"https://k.top4top.io/p_38639owoy0.jpg"},
+   {name:"White", hex:"#F5F0E8", img:"https://xmpp.jix.im/upload/faebb1b97a02b6451d1a273f473437ca532f3e8e/mye6GgLJ3GPGlsYKocU3w2EgsVcAYY7ezCnNwWpy/6949.jpg"},
    {name:"Red", hex:"#6B1D2F", img:"https://l.top4top.io/p_3863ft8e90.jpg"},
-   {name:"Dark Blue", hex:"#1a2a4a", img:"https://k.top4top.io/p_3863ftiyt0.jpg"},
+   {name:"Dark Blue", hex:"#1a2a4a", img:"https://xmpp.jix.im/upload/faebb1b97a02b6451d1a273f473437ca532f3e8e/jODHmp1Q1YWiv3gApDiumg5YqqsBZeDL8LCVxqEA/6953.jpg"},
  ]},
  {id:2, name:"T-shirt levis middle logo", label:"NEW DROP", price:3500, stock:24, sizes:ALL_SIZES, colors:[
    {name:"Black", hex:"#000", img:"https://f.top4top.io/p_3863pfdax0.jpg"},
-   {name:"White", hex:"#fff", img:"https://k.top4top.io/p_3863cujpf0.jpg"},
+   {name:"White", hex:"#fff", img:"https://xmpp.jix.im/upload/faebb1b97a02b6451d1a273f473437ca532f3e8e/a0QpC7Eqle58NJy7Ylqw75FQ957gkC3cRqYoFgo3/6959.jpg"},
    {name:"Blue", hex:"#2b4c8c", img:"https://h.top4top.io/p_3863ygrfl0.jpg"},
    {name:"Pink", hex:"#c97a8a", img:"https://f.top4top.io/p_3863nkaa30.jpg"},
    {name:"Ashen", hex:"#8a8a8a", img:"https://b.top4top.io/p_3863hl1ss0.jpg"},
  ]},
  {id:3, name:"T-shirt levis Milan", label:"MILAN", price:3500, stock:12, sizes:ALL_SIZES, colors:[
-   {name:"Original", hex:"#111", img:"https://g.top4top.io/p_38634voes0.jpg"},
+   {name:"Original", hex:"#111", img:"https://xmpp.jix.im/upload/faebb1b97a02b6451d1a273f473437ca532f3e8e/cE12KTTsa42lJTWmirRKxyMQ6qQcVd8crcmbirVr/6961.jpg"},
  ]},
  {id:4, name:"Levis Classic Red", label:"VINTAGE", price:3500, stock:15, sizes:ALL_SIZES, colors:[
-   {name:"Classic Red", hex:"#8B1A2B", img:"https://g.top4top.io/p_38631sx5h0.jpg"},
+   {name:"Classic Red", hex:"#8B1A2B", img:"https://xmpp.jix.im/upload/faebb1b97a02b6451d1a273f473437ca532f3e8e/SAAQabUJzXKHrGuW2MA56zE02M0DitZMAddnp7Wc/6963_1_.jpg"},
    {name:"Jet Black", hex:"#000", img:"https://h.top4top.io/p_3863akdyu1.jpg"},
  ]},
  {id:5, name:"Levis Urban White", label:"URBAN", price:3500, stock:18, sizes:ALL_SIZES, colors:[
-   {name:"Pure White", hex:"#F5F0E8", img:"https://i.top4top.io/p_3863gs8bq2.jpg"},
+   {name:"Pure White", hex:"#F5F0E8", img:"https://xmpp.jix.im/upload/faebb1b97a02b6451d1a273f473437ca532f3e8e/RUHygByI8XXIZOYZNLdDGY259K74qC0yrzPkvtkn/6965.jpg"},
    {name:"Desert Beige", hex:"#C4B5A3", img:"https://j.top4top.io/p_3863hpa0k3.jpg"},
  ]},
  {id:6, name:"Levis Street Grey", label:"STREET", price:3500, stock:9, sizes:ALL_SIZES, colors:[
-   {name:"Street Grey", hex:"#5a5a5a", img:"https://k.top4top.io/p_38633o4te4.jpg"},
+   {name:"Street Grey", hex:"#5a5a5a", img:"https://xmpp.jix.im/upload/faebb1b97a02b6451d1a273f473437ca532f3e8e/CIn6ZhYTObS7I2yA6LJtXeIlvhqu3VXt6PP0CKWr/6967.jpg"},
    {name:"Coffee Brown", hex:"#4a2c1a", img:"https://l.top4top.io/p_3863rp0235.jpg"},
  ]},
 ];
 
-const calcTotal = n=>{ if(n===0) return 0; const q=Math.floor(n/3), r=n%3; let t=q*8000; if(r===1) t+=3500; if(r===2) t+=6000; return t; };
+const calcTotal = n=>{ if(n===0) return 0; const q=Math.floor(n/3), r=n%3; let t=q*8500; if(r===1) t+=3500; if(r===2) t+=6500; return t; };
 const save = n=> n*3500 - calcTotal(n);
 
 const IconIG = ({s=18})=>React.createElement('svg',{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:1.6},[
@@ -145,7 +145,7 @@ function App(){
       React.createElement('p',{className:"space text-[13px] md:text-[14px] leading-[1.7] mt-5 max-w-[520px]",style:{color:muted}},"Vintage luxury, heavy 280gsm fabric, stable colors. 6 types, 17 variants, all sizes XS to 3XL. Delivery to 58 Wilaya, payment on delivery."),
       // price tiers as luxury pills
       React.createElement('div',{className:"mt-7 flex flex-wrap gap-2"},
-       [{a:"1 PIECE",b:"3500 DA"},{a:"2 PIECES",b:"6000 DA",save:"SAVE 1000"},{a:"3 PIECES",b:"8000 DA",save:"SAVE 2500",hot:true}].map((p,i)=>React.createElement('div',{key:i,className:"rounded-full border px-4 h-10 flex items-center gap-2.5 "+(p.hot?"bg-[#6B1D2F] text-white border-[#6B1D2F]":""),style:{borderColor:p.hot?"#6B1D2F":border,background:p.hot?undefined:card2}},
+       [{a:"1 PIECE",b:"3500 DA"},{a:"2 PIECES",b:"6500 DA",save:"save 500"},{a:"3 PIECES",b:"8500 DA",save:"save 2000",hot:true}].map((p,i)=>React.createElement('div',{key:i,className:"rounded-full border px-4 h-10 flex items-center gap-2.5 "+(p.hot?"bg-[#6B1D2F] text-white border-[#6B1D2F]":""),style:{borderColor:p.hot?"#6B1D2F":border,background:p.hot?undefined:card2}},
         React.createElement('span',{className:"text-[10px] tracking-widest font-bold opacity-70"},p.a),
         React.createElement('span',{className:"text-[13px] font-black"},p.b),
         p.save&&React.createElement('span',{className:"text-[9px] font-bold px-2 py-0.5 rounded-full bg-white/20"},p.save)
@@ -185,7 +185,7 @@ function App(){
       ),
       React.createElement('div',{className:"rounded-[18px] bg-[#6B1D2F] p-5 text-white relative overflow-hidden"},
        React.createElement('p',{className:"text-[10px] tracking-widest opacity-80"},"TODAY'S LUXURY OFFER"),
-       React.createElement('p',{className:"syne font-[800] text-[22px] leading-[0.9] mt-2"},"ORDER 3 = SAVE 2500 DA"),
+       React.createElement('p',{className:"syne font-[800] text-[22px] leading-[0.9] mt-2"},"ORDER 3 = save 2000 DA"),
        React.createElement('p',{className:"text-[11px] mt-2 opacity-80 leading-[1.5]"},"Premium heavy fabric • Vintage wash • No shrinkage • Limited stock"),
        React.createElement('div',{className:"absolute -right-10 -bottom-10 w-32 h-32 rounded-full bg-white/10"})
       ),
@@ -259,7 +259,7 @@ function App(){
       React.createElement('h3',{className:"syne font-[800] text-[24px] md:text-[32px] leading-[0.9] tracking-[-0.03em] mt-3"},sel.name),
       React.createElement('div',{className:"mt-5 flex items-baseline gap-3"},
        React.createElement('span',{className:"text-[28px] font-black tracking-tight"},calcTotal(1)+" DA"),
-       React.createElement('span',{className:"text-[11px] px-2.5 py-1 rounded-full border",style:{borderColor:border,color:muted}},"1=3500 • 2=6000 • 3=8000")
+       React.createElement('span',{className:"text-[11px] px-2.5 py-1 rounded-full border",style:{borderColor:border,color:muted}},"1=3500 • 2=6500 • 3=8500")
       ),
       React.createElement('div',{className:"mt-6"},
        React.createElement('p',{className:"space text-[11px] font-bold tracking-widest"},"COLOR • "+sel.colors[cIdx].name),
@@ -311,7 +311,7 @@ function App(){
      React.createElement('div',{className:"flex justify-between text-[12px]",style:{color:muted}}, React.createElement('span',{},'Subtotal'), React.createElement('span',{},cart.length*3500+' DA')),
      React.createElement('div',{className:"flex justify-between font-bold text-[#6B1D2F] text-[12px]"}, React.createElement('span',{},'You Save'), React.createElement('span',{},'-'+save(cart.length)+' DA')),
      React.createElement('div',{className:"flex justify-between font-black text-[19px] border-t pt-2",style:{borderColor:border}}, React.createElement('span',{},'TOTAL'), React.createElement('span',{},calcTotal(cart.length)+' DA')),
-     React.createElement('div',{className:"text-[10px] font-bold tracking-widest text-center py-2 rounded-full bg-[#6B1D2F]/10 border border-[#6B1D2F]/20"}, cart.length===0?"-":cart.length===1?"1 PIECE = 3500 DA":cart.length===2?"2 PIECES = 6000 DA • SAVE 1000 DA":`${cart.length} PIECES = ${calcTotal(cart.length)} DA • SAVE ${save(cart.length)} DA`),
+     React.createElement('div',{className:"text-[10px] font-bold tracking-widest text-center py-2 rounded-full bg-[#6B1D2F]/10 border border-[#6B1D2F]/20"}, cart.length===0?"-":cart.length===1?"1 PIECE = 3500 DA":cart.length===2?"2 PIECES = 6500 DA • save 500 DA":`${cart.length} PIECES = ${calcTotal(cart.length)} DA • SAVE ${save(cart.length)} DA`),
      React.createElement('form',{onSubmit:async(e)=>{
        e.preventDefault();
        if(cart.length===0){ setStatus('Empty'); return; }
